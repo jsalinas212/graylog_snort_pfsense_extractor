@@ -17,7 +17,7 @@ N/A
 - Step 2: Click on Manage Extractors for the input you want to work with.
 
 ![Step 2](./img/step2.png)
-- Step 3: Clicl Actions > Import Extractors.
+- Step 3: Click Actions > Import Extractors.
 
 ![Step 3](./img/step3.png)
 - Step 4: Paste in JSON and click Add Extractors to Input.
