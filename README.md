@@ -5,6 +5,8 @@ Snort field extraction from pfSense sys logs for parsing in Graylog. This is onl
 
 ![Graylog Example Image](./img/example.png)
 
+***Note: This software is provided as-is without any guarantees. Feel free to download and tinker with it as needed.***
+
 ## Requirements
 N/A
 
