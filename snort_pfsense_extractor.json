@@ -1,0 +1,145 @@
+{
+    "extractors": [
+        {
+            "condition_type": "regex",
+            "condition_value": "^snort*",
+            "converters": [],
+            "cursor_strategy": "copy",
+            "extractor_config": {
+                "regex_value": "Classification\\:\\s+([^\\]]+)"
+            },
+            "extractor_type": "regex",
+            "order": 16,
+            "source_field": "message",
+            "target_field": "classification",
+            "title": "Snort Classification"
+        },
+	{
+            "condition_type": "regex",
+            "condition_value": "^snort*",
+            "converters": [],
+            "cursor_strategy": "copy",
+            "extractor_config": {
+                "regex_value": "snort\\[(\\d+)"
+            },
+            "extractor_type": "regex",
+            "order": 16,
+            "source_field": "message",
+            "target_field": "pid",
+            "title": "Snort PID"
+        },
+        {
+            "condition_type": "regex",
+            "condition_value": "^snort*",
+            "converters": [],
+            "cursor_strategy": "copy",
+            "extractor_config": {
+                "regex_value": "Priority\\:\\s+(\\d+)"
+            },
+            "extractor_type": "regex",
+            "order": 17,
+            "source_field": "message",
+            "target_field": "severity",
+            "title": "Snort Severity"
+        },
+        {
+            "condition_type": "regex",
+            "condition_value": "^snort*",
+            "converters": [],
+            "cursor_strategy": "copy",
+            "extractor_config": {
+                "regex_value": "snort\\[\\d+\\]\\:\\s+\\[[^\\]]+\\]\\s+(.*?)(\\s+\\[Classification|\\[Priority)"
+            },
+            "extractor_type": "regex",
+            "order": 18,
+            "source_field": "message",
+            "target_field": "signature",
+            "title": "Snort Signature"
+        },
+        {
+            "condition_type": "regex",
+            "condition_value": "^snort*",
+            "converters": [],
+            "cursor_strategy": "copy",
+            "extractor_config": {
+                "regex_value": "snort\\[\\d+\\]\\:\\s+\\[([^\\]]+)"
+            },
+            "extractor_type": "regex",
+            "order": 18,
+            "source_field": "message",
+            "target_field": "signature_id",
+            "title": "Snort Signature ID"
+        },
+        {
+            "condition_type": "regex",
+            "condition_value": "^snort*",
+            "converters": [],
+            "cursor_strategy": "copy",
+            "extractor_config": {
+                "regex_value": "\\{\\w+\\}\\s+(\\d{1,3}\\.\\d{1,3}\\.\\d{1,3}\\.\\d{1,3})"
+            },
+            "extractor_type": "regex",
+            "order": 19,
+            "source_field": "message",
+            "target_field": "src_ip",
+            "title": "Snort Source IP"
+        },
+        {
+            "condition_type": "regex",
+            "condition_value": "^snort*",
+            "converters": [],
+            "cursor_strategy": "copy",
+            "extractor_config": {
+                "regex_value": "\\{\\w+\\}\\s+(\\d{1,3}\\.\\d{1,3}\\.\\d{1,3}\\.\\d{1,3})"
+            },
+            "extractor_type": "regex",
+            "order": 19,
+            "source_field": "message",
+            "target_field": "src_port",
+            "title": "Snort Source Port"
+        },
+        {
+            "condition_type": "regex",
+            "condition_value": "^snort*",
+            "converters": [],
+            "cursor_strategy": "copy",
+            "extractor_config": {
+                "regex_value": "\\-\\>\\s+(\\d{1,3}\\.\\d{1,3}\\.\\d{1,3}\\.\\d{1,3})"
+            },
+            "extractor_type": "regex",
+            "order": 19,
+            "source_field": "message",
+            "target_field": "dst_ip",
+            "title": "Snort Destination IP"
+        },
+        {
+            "condition_type": "regex",
+            "condition_value": "^snort*",
+            "converters": [],
+            "cursor_strategy": "copy",
+            "extractor_config": {
+                "regex_value": "\\{\\w+\\}\\s+\\d{1,3}\\.\\d{1,3}\\.\\d{1,3}\\.\\d{1,3}\\:(\\d+)"
+            },
+            "extractor_type": "regex",
+            "order": 19,
+            "source_field": "message",
+            "target_field": "dst_port",
+            "title": "Snort Destination Port"
+        },
+        {
+            "condition_type": "regex",
+            "condition_value": "^snort*",
+            "converters": [],
+            "cursor_strategy": "copy",
+            "extractor_config": {
+                "regex_value": "\\{([^\\}]+)"
+            },
+            "extractor_type": "regex",
+            "order": 19,
+            "source_field": "message",
+            "target_field": "xport_proto",
+            "title": "Snort Transport"
+        }
+    ],
+    "version": "1.00.3.jas"
+}
