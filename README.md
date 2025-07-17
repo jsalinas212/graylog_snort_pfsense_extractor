@@ -3,6 +3,8 @@
 ## Description
 Snort field extraction from pfSense sys logs for parsing in Graylog. This is only for IDS detections and not other general snort logs.
 
+!(graylog example image)[example.png]
+
 ## Requirements
 - N/A
 
